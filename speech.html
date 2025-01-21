@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://use.typekit.net/gme4gpi.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/design.css" />
+  <title>Game</title>
+</head>
+
+
+<body>
+  <div id="speech">
+    <div class="game-container">
+      <div class="flex-row">
+        <a href="home.html"><button class="backButton">
+          <svg class="backIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><title>ionicons-v5-a</title><polyline points="244 400 100 256 244 112" style="fill:none;stroke:#004F40;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/><line x1="120" y1="256" x2="412" y2="256" style="fill:none;stroke:#004F40;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/></svg></button>
+        </a>
+        <button class="play-instructions-btn" id="playInstructionsBtn"><img class="pandaHeadB" alt="Panda Face" src="img/pandaHead.svg" />Click me for instructions!</button>
+        <audio id="instructionsAudio" src="assets/instructions.mp3"></audio>
+      </div>
+      <div id="play-area">
+        <div class="flex-column">
+          <h1>Listen Carefully!</h1>
+          <h3 class="instructions">What animal is making that noise?</h3>
+          <p class="result" id="result"></p>
+          <audio id="wrongAnswerAudio" src="assets/wrong.mp3"></audio>
+          <div id="hintArea">
+            <div class="hint-image">
+              <img class="hint" id="hint" src="./assets/pandaHead.svg" alt="Hint">
+            </div>
+            <button class="action-btns" id="hintBtn">hint</button>
+          </div>
+        </div>
+        <div class="flex-row last-row">
+          <img id="reading" src="./img/pandaReading.svg" alt="Reading Panda">
+          <div>
+            <button class="action-btns" id="playSound"><svg id="playIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+<rect width="24" height="24" fill="none"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3 5.49686C3 3.17662 5.52116 1.73465 7.52106 2.91106L18.5764 9.41423C20.5484 10.5742 20.5484 13.4259 18.5764 14.5858L7.52106 21.089C5.52116 22.2654 3 20.8234 3 18.5032V5.49686Z" fill="#FBFFF7"/>
+</svg></button>
+            <audio id="animalAudio" src=""></audio>
+            <button class="action-btns" id="mic"><svg id="micIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" version="1.1">
+    <title>Mic</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mic">
+            <rect id="Rectangle" fill-rule="nonzero" x="0" y="0" width="24" height="24">
+
+</rect>
+            <rect id="Rectangle" stroke="#004F40" stroke-width="2" stroke-linecap="round" x="9" y="3" width="6" height="11" rx="3">
+
+</rect>
+            <line x1="12" y1="18" x2="12" y2="21" id="Path" stroke="#004F40" stroke-width="2" stroke-linecap="round">
+
+</line>
+            <line x1="8" y1="21" x2="16" y2="21" id="Path" stroke="#004F40" stroke-width="2" stroke-linecap="round">
+
+</line>
+            <path d="M19,11 C19,14.866 15.866,18 12,18 C8.13401,18 5,14.866 5,11" id="Path" stroke="#004F40" stroke-width="2" stroke-linecap="round">
+
+</path>
+        </g>
+    </g>
+</svg></button>
+          </div>
+        </div>
+      </div>
+      <div id="win-area">
+        <p>Amazing you got it! <br> Nice job it was correct.</p>
+      </div>
+
+    </div>
+  </div>
+  <script src="js/game.js"></script>
+</body>
+
+</html>
